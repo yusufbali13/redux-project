@@ -8,6 +8,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const user = false;
+
+  const handleLogout = () => {
+    navigate("/login");
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
