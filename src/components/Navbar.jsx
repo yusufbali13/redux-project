@@ -33,12 +33,12 @@ export default function Navbar() {
             Clarusway News
           </Typography>
 
-          {user.email && user.password && (
+          {user?.email && user.password && (
             <Button color="inherit" onClick={handleLogout}>
               Logout
             </Button>
           )}
-          {!user.email && (
+          {!user?.email && (
             <Button color="inherit" onClick={() => navigate("/login")}>
               Login
             </Button>
