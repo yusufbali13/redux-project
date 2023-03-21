@@ -12,7 +12,7 @@ export const getNews = createAsyncThunk(
   //? async callback func
 
   async (thunkAPI, { rejectWithValue }) => {
-    const API_KEY = ApiKey;
+    const API_KEY = process.env.NEWS_API_KEY;
     const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
 
     try {
